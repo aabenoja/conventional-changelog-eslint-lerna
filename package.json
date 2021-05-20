@@ -1,0 +1,23 @@
+{
+  "name": "@aabenoja/conventional-changelog-eslint-lerna",
+  "version": "1.0.0",
+  "description": "An adapter for consuming conventional-changelog-eslint with lerna",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aabenoja/conventional-changelog-eslint-lerna.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aabenoja",
+  "dependencies": {
+    "conventional-changelog-eslint": "^3.0.9"
+  },
+  "bugs": {
+    "url": "https://github.com/aabenoja/conventional-changelog-eslint-lerna/issues"
+  },
+  "homepage": "https://github.com/aabenoja/conventional-changelog-eslint-lerna#readme",
+  "devDependencies": {}
+}
