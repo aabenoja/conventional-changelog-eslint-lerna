@@ -1,12 +1,10 @@
-const eslintConfig = require('conventional-changelog-eslint');
+const Q = require('q');
+const conventionalChangelog = require('conventional-changelog-eslint/conventional-changelog');
+const parserOpts = require('conventional-changelog-eslint/parser-opts');
+const recommendedBumpOpts = require('conventional-changelog-eslint/recommended-bump');
+const writerOpts = require('conventional-changelog-eslint/writer-opts');
 
-module.exports = function getEslintConfig() {
-  let returnedConfig = {};
-  eslintConfig((error, config) => {
-    if (error) {
-      throw new Error('An error ocurred loading conventional-changelog-eslint');
-    }
-    returnedConfig = config;
-  });
-  return returnedConfig;
-}
+module.exports = Q.all([conventionalChangelog, parserOpts, recommendedBumpOpts, writerOpts])
+  .spread((conventionalChangelog, parserOpts, recommendedBumpOpts, writerOpts) => (
+    { conventionalChangelog, parserOpts, recommendedBumpOpts, writerOpts }
+  ));
