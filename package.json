@@ -19,5 +19,7 @@
     "url": "https://github.com/aabenoja/conventional-changelog-eslint-lerna/issues"
   },
   "homepage": "https://github.com/aabenoja/conventional-changelog-eslint-lerna#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "semantic-release": "^19.0.5"
+  }
 }
